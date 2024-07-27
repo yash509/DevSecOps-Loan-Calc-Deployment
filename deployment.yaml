@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loan-calc-deployment
+spec:
+  replicas: 6  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: loan-calc
+  template:
+    metadata:
+      labels:
+        app: loan-calc
+    spec:
+      containers:
+      - name: loan-calc
+        image: yash5090/loan-calc:latest
+        ports:
+        - containerPort: 5000
