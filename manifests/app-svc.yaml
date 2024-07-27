@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lms-system-service
+  name: loan-calc-service
 spec:
   selector:
-    app: lms-system
+    app: loan-calc
   ports:
     - protocol: TCP
       port: 5000
